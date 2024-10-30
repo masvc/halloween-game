@@ -25,5 +25,5 @@ none
 
 - 参考にしたページの内容が良すぎたので勉強のためほとんどの部分はマネしました。ハロウィンの雰囲気を楽しんでもらえるようにデザインにこだわりました。次回はさらにインタラクティブな要素を追加したいです。
 - [参考]
-  https://codepen.io/WebDevSimplified/pen/EdEjyx
-  https://codepen.io/diogo_ml_gomes/pen/JmJyNr
+  - https://codepen.io/WebDevSimplified/pen/EdEjyx
+  -  https://codepen.io/diogo_ml_gomes/pen/JmJyNr

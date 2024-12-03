@@ -1,0 +1,145 @@
+/* スタート画面のスタイル */
+body {
+  font-family: "Lunacy";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(#1a0f00, #000);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 装飾要素の追加 */
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(74, 40, 0, 0.8) 0%,
+    rgba(26, 15, 0, 0.9) 100%
+  );
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* トグルスイッチ */
+#toggle {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  border: 3px solid #e56d48;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: border-color 0.5s;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 20px rgba(229, 109, 72, 0.3);
+  border-width: 2px;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .switch {
+    width: 400px;
+    height: 133px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .switch {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+/* 既存のスタイルに追加 */
+.switch label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.switch label:before {
+  content: "Ready??";
+  color: #e56d48;
+  font-size: 50px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 70%;
+  transform: translateX(-70%);
+  line-height: 190px;
+  transition: color 0.5s ease;
+}
+
+.toggle-btn {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 50%;
+  background: url("../img/togglebtn.png") no-repeat center center;
+  background-size: cover;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(229, 109, 72, 0.5);
+}
+
+/* トグルの状態変化 */
+.switch input[type="checkbox"]:checked + label {
+  border-color: #4d7c99;
+}
+
+.switch input[type="checkbox"]:checked + label:before {
+  content: "OK START!!";
+  color: #4d7c99;
+  left: 25%;
+  transform: translateX(-25%);
+}
+
+.switch input[type="checkbox"]:checked + label .toggle-btn {
+  left: calc(100% - 195px);
+}
+
+/* レスポンシブ対応の補完 */
+@media screen and (max-width: 768px) {
+  .switch label:before {
+    font-size: 35px;
+    line-height: 125px;
+  }
+
+  .toggle-btn {
+    width: 125px;
+    height: 125px;
+  }
+
+  .switch input[type="checkbox"]:checked + label .toggle-btn {
+    left: calc(100% - 130px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .switch label:before {
+    font-size: 25px;
+    line-height: 95px;
+  }
+
+  .toggle-btn {
+    width: 90px;
+    height: 90px;
+  }
+
+  .switch input[type="checkbox"]:checked + label .toggle-btn {
+    left: calc(100% - 95px);
+  }
+}

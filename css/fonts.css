@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap");
+
+body {
+  font-family: "Creepster", cursive;
+}
+
+.page-title {
+  font-family: "Nosifer", cursive;
+}
+
+.game-info {
+  font-family: "Creepster", cursive;
+}
+
+.overlay-text {
+  font-family: "Nosifer", cursive;
+}

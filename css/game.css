@@ -1,0 +1,26 @@
+/* ゲーム画面専用のスタイル */
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px auto;
+  justify-content: center;
+  perspective: 500px;
+  width: min(95%, 800px);
+  padding: 20px;
+  background: var(--bg-dark);
+  border-radius: 20px;
+  box-shadow: 0 0 20px var(--shadow-color);
+}
+
+/* カード関連のスタイル */
+.card {
+  position: relative;
+  aspect-ratio: 3/4;
+  width: 100%;
+  max-width: 140px;
+  margin: auto;
+  cursor: pointer;
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}

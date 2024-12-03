@@ -6,151 +6,18 @@
     <meta name="halloween game" content="ハロウィンゲームです！" />
     <title>START | Halloween Game</title>
     <link rel="stylesheet" href="css/destyle.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favicon.png" id="favicon" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-      body {
-        font-family: "Lunacy";
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        background: #081219;
-        margin: 0;
-        padding: 0;
-      }
-
-      .switch {
-        position: relative;
-        width: 600px;
-        height: 200px;
-        border: 3px solid #e56d48;
-        border-radius: 10%;
-        cursor: pointer;
-        transition: border-color 0.5s;
-      }
-
-      #toggle {
-        display: none;
-      }
-
-      .switch label {
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: relative;
-      }
-
-      .switch label:before {
-        content: "Ready??";
-        color: #e56d48;
-        font-size: 50px;
-        text-transform: uppercase;
-        position: absolute;
-        left: 70%;
-        transform: translateX(-70%);
-        line-height: 190px;
-        transition: color 0.5s ease;
-      }
-
-      .toggle-btn {
-        width: 190px;
-        height: 190px;
-        position: absolute;
-        left: 5px;
-        top: 5px;
-        border-radius: 50%;
-        background: url("img/togglebtn.png") no-repeat center center;
-        background-size: cover;
-        transition: left 0.5s ease, opacity 0.5s ease;
-      }
-
-      .switch input[type="checkbox"]:checked + label {
-        border-color: #4d7c99;
-      }
-
-      .switch input[type="checkbox"]:checked + label:before {
-        content: "OK START!!";
-        color: #4d7c99;
-        left: 25%;
-        transform: translateX(-25%);
-      }
-
-      .switch input[type="checkbox"]:checked + label .toggle-btn {
-        left: calc(100% - 195px);
-      }
-
-      /* タブレット用スタイル */
-      @media screen and (max-width: 768px) {
-        .switch {
-          width: 400px;
-          height: 133px;
-        }
-
-        .switch label:before {
-          font-size: 35px;
-          line-height: 125px;
-        }
-
-        .toggle-btn {
-          width: 125px;
-          height: 125px;
-        }
-
-        .switch input[type="checkbox"]:checked + label .toggle-btn {
-          left: calc(100% - 130px);
-        }
-      }
-
-      /* スマートフォン用スタイル */
-      @media screen and (max-width: 480px) {
-        .switch {
-          width: 300px;
-          height: 100px;
-        }
-
-        .switch label:before {
-          font-size: 25px;
-          line-height: 95px;
-        }
-
-        .toggle-btn {
-          width: 90px;
-          height: 90px;
-        }
-
-        .switch input[type="checkbox"]:checked + label .toggle-btn {
-          left: calc(100% - 95px);
-        }
-      }
-    </style>
   </head>
   <body>
-    <div class="switch">
-      <input type="checkbox" id="toggle" />
+    <div class="switch" role="button" aria-label="Start game">
+      <input type="checkbox" id="toggle" aria-hidden="true" />
       <label for="toggle">
-        <div class="toggle-btn"></div>
+        <div class="toggle-btn" aria-hidden="true"></div>
       </label>
     </div>
-
-    <script>
-      $(document).ready(function () {
-        $("#toggle").change(function () {
-          const label = $(".switch label");
-          if (this.checked) {
-            label.css("border-color", "#4D7C99");
-            label.find(":before").text("OK START!!").css("color", "#4D7C99");
-            setTimeout(function () {
-              window.location.href = "main.html";
-            }, 2000);
-          } else {
-            label.css("border-color", "#E56D48");
-            label.find(":before").text("Ready??").css("color", "#E56D48");
-          }
-        });
-      });
-    </script>
+    <script src="js/start.js"></script>
   </body>
 </html>

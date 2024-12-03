@@ -36,16 +36,19 @@
 
 halloween/
 ├── css/
+│ ├── animations.css # アニメーション定義
 │ ├── destyle.css # リセット CSS
 │ ├── fonts.css # フォント設定
+│ ├── game.css # ゲーム画面のスタイル
+│ ├── overlay.css # オーバーレイのスタイル
 │ └── style.css # メインスタイル
+├── img/
+│ ├── favicon.png # ファビコン
+│ └── togglebtn.png # トグルボタン画像
 ├── js/
 │ ├── cardGenerator.js # カード生成
 │ ├── game.js # ゲームロジック
 │ └── start.js # スタート画面制御
-├── img/
-│ ├── favicon.png # ファビコン
-│ └── togglebtn.png # トグルボタン画像
 ├── index.html # スタート画面
 ├── main.html # ゲーム画面
 └── readme.md # このファイル
